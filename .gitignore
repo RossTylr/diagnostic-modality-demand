@@ -1,0 +1,22 @@
+# OS/system
+.DS_Store
+*.pyc
+__pycache__/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Environment
+.env
+.envrc
+
+# Data
+data/raw/
+data/processed/
+data/lookup/
+*.zip
+*.csv
+*.xlsx
+
+# Streamlit
+.streamlit/

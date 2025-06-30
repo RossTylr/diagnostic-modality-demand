@@ -1,0 +1,89 @@
+name: diag-demand
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Core Python
+  - python=3.10
+  - pip
+
+  # Data Handling
+  - pandas
+  - numpy
+  - openpyxl
+  - xlrd
+  - pyarrow
+  - tqdm
+  - requests
+
+  # Geospatial Analysis
+  - geopandas
+  - shapely
+  - pyproj
+  - contextily
+  - folium
+  - geopy
+  - rasterio
+  - fiona
+  - mapclassify
+
+  # Visualisation
+  - matplotlib
+  - seaborn
+  - plotly
+  - ipywidgets
+  - jupyterlab
+  - ipykernel
+  - notebook
+  - colorcet
+
+  # Machine Learning and Modelling
+  - scikit-learn
+  - xgboost
+  - lightgbm
+  - catboost
+  - statsmodels
+  - pmdarima
+  - prophet
+  - tensorflow
+  - keras
+  - networkx
+
+  # Simulation
+  - simpy
+  - scipy
+  - salib                     # Sensitivity analysis
+  - joblib                    # Parallel replication handling
+
+  # Clustering and Dimensionality Reduction
+  - umap-learn
+  - hdbscan
+  - yellowbrick
+  - fastdtw                  # Dynamic time warping (for temporal alignment)
+
+  # NLP + Text Analytics
+  - nltk
+  - spacy
+  - fuzzywuzzy
+  - rapidfuzz
+
+  # Web App / Streamlit
+  - streamlit
+  - streamlit-folium
+  - pydeck
+
+  # Testing + Utilities
+  - pytest
+  - black
+  - isort
+  - mypy
+
+  # Pip-only dependencies
+  - pip:
+      - streamlit-option-menu
+      - jenkspy
+      - kaleido
+      - pyrosm
+      - geoplot
+      - momepy
+      - git+https://github.com/facebookresearch/segment-anything.git
