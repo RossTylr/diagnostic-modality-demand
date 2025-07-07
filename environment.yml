@@ -1,20 +1,22 @@
-name: diag-demand
+name: diagnostic-demand
 channels:
   - conda-forge
   - defaults
+
 dependencies:
-  # Core Python
   - python=3.10
   - pip
 
   # Data Handling
   - pandas
   - numpy
-  - openpyxl
-  - xlrd
   - pyarrow
+  - openpyxl
+  - pyxlsb
   - tqdm
+  - rich
   - requests
+  - pyogrio
 
   # Geospatial Analysis
   - geopandas
@@ -26,18 +28,25 @@ dependencies:
   - rasterio
   - fiona
   - mapclassify
+  - osmnx
+  - r5py
+  - libpysal
+  - spint
+  - spreg
+  - esda
+  - spaghetti
 
   # Visualisation
   - matplotlib
   - seaborn
   - plotly
+  - colorcet
   - ipywidgets
   - jupyterlab
   - ipykernel
   - notebook
-  - colorcet
 
-  # Machine Learning and Modelling
+  # Machine Learning & Modelling
   - scikit-learn
   - xgboost
   - lightgbm
@@ -48,23 +57,24 @@ dependencies:
   - tensorflow
   - keras
   - networkx
+  - pytorch::pytorch
 
-  # Simulation
+  # Simulation / Optimisation
   - simpy
+  - mesa
   - scipy
-  - salib                     # Sensitivity analysis
-  - joblib                    # Parallel replication handling
+  - salib
+  - joblib
 
-  # Clustering and Dimensionality Reduction
+  # Clustering & Dimensionality Reduction
   - umap-learn
   - hdbscan
   - yellowbrick
-  - fastdtw                  # Dynamic time warping (for temporal alignment)
+  - fastdtw
 
-  # NLP + Text Analytics
+  # NLP & String Matching
   - nltk
   - spacy
-  - fuzzywuzzy
   - rapidfuzz
 
   # Web App / Streamlit
@@ -72,18 +82,26 @@ dependencies:
   - streamlit-folium
   - pydeck
 
-  # Testing + Utilities
+  # Testing & Dev Utilities
   - pytest
+  - pytest-cov
   - black
   - isort
+  - ruff
   - mypy
+  - pre-commit
 
-  # Pip-only dependencies
+  # Pip-only extras (validated)
   - pip:
+      - torch-geometric
+      - torch-scatter
+      - torch-sparse
+      - pymob
+      - openrouteservice
       - streamlit-option-menu
       - jenkspy
       - kaleido
       - pyrosm
       - geoplot
       - momepy
-      - git+https://github.com/facebookresearch/segment-anything.git
+      # segment-anything removed due to Python version conflict
